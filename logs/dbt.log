@@ -50,3 +50,36 @@
     raise Abort() from None
 click.exceptions.Abort
 
+
+
+============================== 2023-04-27 01:21:59.548066 | 8659c98a-718a-4028-8049-500aa75a2f6b ==============================
+[0m01:21:59.548066 [info ] [MainThread]: Running with dbt=1.4.6
+[0m01:21:59.549067 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\EmmaC\\.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'DS5559_LAB', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m01:21:59.549067 [debug] [MainThread]: Tracking: tracking
+[0m01:21:59.558097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014412F63BB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014412F63D60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014412FBCA90>]}
+[0m01:21:59.559098 [debug] [MainThread]: Starter project path: C:\Users\EmmaC\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\include\starter_project
+[0m01:22:03.950560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000144104ED4B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001443280EAA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001443280F190>]}
+[0m01:22:03.950560 [debug] [MainThread]: Flushing usage events
+[0m01:22:04.072830 [error] [MainThread]: Encountered an error:
+
+[0m01:22:04.074836 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\EmmaC\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\main.py", line 136, in main
+    results, succeeded = handle_and_check(args)
+  File "C:\Users\EmmaC\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\main.py", line 206, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "C:\Users\EmmaC\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\main.py", line 253, in run_from_args
+    results = task.run()
+  File "C:\Users\EmmaC\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\task\init.py", line 305, in run
+    self.create_profile_from_target(adapter, profile_name=project_name)
+  File "C:\Users\EmmaC\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\task\init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\EmmaC\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\task\init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\EmmaC\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\task\init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+  File "C:\Users\EmmaC\AppData\Local\Programs\Python\Python310\lib\site-packages\click\termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\EmmaC\AppData\Local\Programs\Python\Python310\lib\site-packages\click\termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
